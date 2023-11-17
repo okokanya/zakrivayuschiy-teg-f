@@ -4,3 +4,84 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+
+:root.theme-dark{
+  --background-color: rgb(0, 0, 0);
+  --font-color: #00CC14;
+  --accent-color: rgb(0, 204, 20);
+
+
+  --wght-title: 785;
+  --wght-text: 465;
+
+
+  --stripe-color: #000;
+  --start-gradient-color: #007f0c;
+  --end-gradient-color: #004306;
+  --bg-gradient: to bottom, var(--start-gradient-color) 0%, var(--end-gradient-color) 100%;
+  --stroke: rgba(0, 0, 0, 0.5);
+  --contour: rgb(0, 204, 20);
+
+}
+
+
+:root.theme-light {
+  --background-color: rgb(255, 255, 255);
+  --font-color: rgb(0, 0, 0);
+  --accent-color: rgb(255, 255, 255);
+
+
+  --wght-title: 700;
+  --wght-text: 400;
+
+  --stripe-color: #d3d3d3;
+  --start-gradient-color: #e7e7e7;
+  --end-gradient-color: #1a1a1a;
+  --bg-gradient: to bottom, var(--start-gradient-color) 0%, var(--start-gradient-color) 0.01%, var(--end-gradient-color) 100%;
+  --stroke: rgba(255, 255, 255, 0.5);
+  --contour: rgb(0, 0, 0);
+
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root{
+    --background-color: rgb(0, 0, 0);
+    --font-color: rgb(0, 204, 20);
+    --accent-color: rgb(0, 204, 20);
+
+    --wght-title: 785;
+    --wght-text: 465;
+
+    --stripe-color: #000;
+    --start-gradient-color: #007f0c;
+    --end-gradient-color: #004306;
+    --bg-gradient: to bottom, var(--start-gradient-color) 0%, var(--end-gradient-color) 100%;
+    --stroke: rgba(0, 0, 0, 0.5);
+    --contour: rgb(0, 204, 20);
+  }
+}
+
+
+
+@media (prefers-color-scheme: light) {
+  :root{
+    --background-color: rgb(255, 255, 255);
+    --font-color: rgb(0, 0, 0);
+    --accent-color: rgb(255, 255, 255);
+
+  
+    --wght-title: 700;
+    --wght-text: 400;
+
+    --stripe-color: #d3d3d3;
+    --start-gradient-color: #e7e7e7;
+    --end-gradient-color: #1a1a1a;
+    --bg-gradient: to bottom, var(--start-gradient-color) 0%, var(--start-gradient-color) 0.01%, var(--end-gradient-color) 100%;
+    --stroke: rgba(255, 255, 255, 0.5);
+    --contour: rgb(0, 0, 0);
+
+
+  }
+}

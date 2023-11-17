@@ -17,4 +17,455 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  padding: 100px 0;
+  font-family: var(--inter);
+  color: var(--font-color);
+  font-variation-settings: "wght" var(--wght-text--light);
+  background-color: var(--background-color);
+  background-image: var(--background-image);
+  background-attachment: fixed;
+  background-size: cover;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.card-text:not(:last-child) {
+  margin-block-end: 1.5em;
+}
+
+.card-textholder {
+  padding: 25px;
+}
+
+.section {
+  border: 2px solid var(--font-color);
+  background-color: var(--background-color);
+  width: clamp(372px, 50%, 700px);
+  margin: 0 auto 49px;
+}
+
+.header {
+  font-family: var(--pressStart);
+  padding: 157px 0 18px 0;
+  text-align: center;
+  margin: 0 auto 100px;
+}
+
+.h1 {
+  font-size: clamp(0.9rem, 1.58vw, 3rem);
+    margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.h2 {
+  font-size: clamp(49px, 4.5vw, 4.3rem);
+  text-transform: uppercase;
+  margin-bottom: 43px;
+  letter-spacing: 0.0em;
+}
+
+.card-title {
+  padding: 5px 10px;
+  font-size: 1em;
+  font-variation-settings: 'wght' var(--wght-title, 700);
+  letter-spacing: -0.023em;
+  line-height: 1.4em;
+}
+
+.theme-menu__button {
+  margin-bottom: 0.51em;
+  position: relative;
+  transition: ease 0.3s;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  letter-spacing: 0.03em;
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
+}
+
+.theme-menu__button::after {
+  position: absolute;
+  content: "";
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--font-color);
+  display: block;
+  transition: 0.3s;
+}
+
+.theme-menu__button:focus-visible:not(:hover):after {
+  width: 100%;
+}
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
+}
+
+.theme-menu__button:disabled::after {
+  content: "▶";
+  position: absolute;
+  top: 0;
+  left: -20px;
+  animation: menuArrow 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes menuArrow {
+  0% {
+    left: -20px;
+  }
+  100% {
+    left: -16px;
+  }
+}
+
+.header__theme-menu {
+  width: max-content;
+  margin: 0 auto;
+  text-align: left;
+  padding: 0 0 0 1em;
+}
+
+.save-button {
+  display: flex;
+  column-gap: 8px;
+  align-items: center;
+  margin: 0 auto;
+  width: clamp(335px, 30%, 340px);
+  min-height: 51px;
+  padding: 15px 19px;
+  justify-content: center;
+}
+
+.floppy {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-imageholder {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  justify-content: center;
+  display: flex;
+  aspect-ratio: 1 / 1;
+  box-shadow: 0 -2px 0 var(--font-color), 0 2px 0 var(--font-color);
+}
+
+.card-label {
+  position: absolute;
+  z-index: 4;
+  display: block;
+  right: 25px;
+  top: 25px;
+  font-family: var(--pressStart);
+  font-size: clamp(14px, 1vw, 30px);
+  mix-blend-mode: hard-light;
+  color: var(--font-color);
+  text-transform: uppercase;
+}
+
+.card-label {
+  text-shadow: -1px 0 var(--stroke), 0 1px var(--stroke), 1px 0 var(--stroke), 0 -1px var(--stroke);
+}
+
+@supports ((-webkit-text-stroke: 1px var(--stroke))) {
+  .card-label {
+    -webkit-text-stroke: 1px var(--stroke);
+    /* text-stroke: 1px  var(--stroke); */
+    text-shadow: none;
+  }
+}
+
+/* buttons */
+
+.button-holder {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  padding: 0 25px 26px;
+  column-gap: 4px;
+}
+
+.like-icon {
+  width: 36px;
+  height: 34px;
+  overflow: visible;
+}
+
+.card__icon-button {
+  /* padding: 4px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--transparent-color);
+  transition: 0.3s ease;
+}
+
+.card__icon-button:focus-visible {
+  border-color: var(--font-color);
+}
+
+.button-styles {
+  font-family: var(--pressStart);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1em;
+  padding: 9px 17px;
+  border: 2px solid var(--font-color);
+  background-color: var(--background-color);
+  position: relative;
+  transition: 0.3s;
+  min-width: 130px;
+}
+
+.button-animation {
+  box-shadow: 0px 0px 0 0 var(--font-color);
+}
+
+.button-animation:focus-visible {
+  box-shadow: 4px 4px 0 0 var(--font-color);
+}
+
+.button-animation::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  background: var(--hover-color);
+  transition: 0.5s ease-in-out;
+  mix-blend-mode: difference;
+}
+
+.button-animation:hover::after {
+  z-index: 2;
+
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--accent-color);
+  transition: 0.5s ease-in-out;
+}
+
+.button__text {
+  position: relative;
+  z-index: 3;
+  mix-blend-mode: difference;
+  color: var(--accent-color);
+}
+
+/* hover */
+.card__icon-button .core {
+  fill: var(--transparent-color);
+  transition: 0.03s;
+  transition-delay: 0.03s;
+}
+
+.card__icon-button:hover .core {
+  fill: var(--contour);
+  transition-duration: 0.3s;
+}
+
+.card__icon-button .main-body {
+  fill: var(--transparent-color);
+  transition-duration: 0.3s;
+}
+
+.card__icon-button:hover .main-body {
+  fill: var(--contour);
+  transition-duration: 0.3s;
+  transition-delay: 0.05s;
+}
+
+/* active */
+.card__icon-button .core {
+  fill: var(--transparent-color);
+  transition: 0.03s;
+  transition-delay: 0.03s;
+}
+
+.card__icon-button:active .core {
+  fill: var(--red);
+  transition-duration: 0.3s;
+}
+
+.card__icon-button .main-body {
+  fill: var(--transparent-color);
+  transition-duration: 0.3s;
+}
+
+.card__icon-button:active .main-body {
+  fill: var(--red);
+  transition-duration: 0.3s;
+  transition-delay: 0.05s;
+}
+
+/* Клик по иконке */
+.like-icon.is-liked .contour {
+  transition-delay: 0.06s;
+  transition-duration: 0.3s;
+  fill: var(--red);
+}
+
+.like-icon.is-liked .main-body {
+  transition-duration: 0.3s;
+  fill: var(--red);
+}
+
+.like-icon.is-liked .core {
+  transition-duration: 0.3s;
+  fill: var(--red);
+}
+
+.like-icon.is-liked .heart {
+  animation: heart-scale 0.6s ease-in;
+  animation-delay: 0.1s;
+  animation-direction: alternate;
+  transform-origin: center;
+}
+
+@keyframes heart-scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.contour {
+  transition: 0.01s;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.like-icon.is-liked .sparks {
+  opacity: 0;
+  animation: sparksShine 0.3s ease-in;
+  animation-delay: 0.3s;
+  animation-direction: alternate;
+}
+
+@keyframes sparksShine {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.dialog[open] {
+  background-color: var(--background-color);
+  color: var(--font-color);
+  padding: 31px 30px;
+  width: clamp(320px, 30vw, 357px);
+}
+
+.dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.flex-holder {
+  display: flex;
+  align-items: center;
+  margin: 0 0 30px 0;
+}
+
+.dialog-button {
+  width: 100%;
+}
+
+.dialog_icon {
+  inline-size: 39px;
+  margin: 0 20px 0 0;
+}
+
+.button_icon {
+  block-size: 1.5em;
+}
+
+@media screen and (max-width: 380px) {
+  .page {
+    /* padding: 100px 4px; */
+  }
+
+  .section {
+    width: 100%;
+    min-width: 300px;
+  }
+
+  .save-button {
+    width: 100%;
+  }
+
+  .header {
+    padding: 134px 0 18px 0
+  }
+
+  .h2 {
+    margin-bottom: 30px;
+  }
+
+  .h1 {
+    letter-spacing: -0.02em;
+    margin-bottom: 17px;
+  }
+
+  .card-title {
+    padding: 5px 10px;
+    line-height: 1.2em;
+  }
+}
+
+
+/* card-image */
+/* Минимум на семи картинках должны быть разные фильтры */
+.section:nth-child(1) .card-image {
+  filter: brightness(3);
+}
+
+.section:nth-child(2) .card-image {
+  filter: grayscale(1);
+}
+
+.section:nth-child(3) .card-image {
+  filter: blur(1.5rem);
+}
+
+.section:nth-child(4) .card-image {
+  filter: sepia(1);
+}
+
+.section:nth-child(5) .card-image {
+  filter: opacity(0.2);
+}
+
+.section:nth-child(6) .card-image {
+  filter: saturate(4);
+}
+
+.section:nth-child(7) .card-image {
+  filter: hue-rotate(-90deg);
+}
+
+/* хотя бы один из них — множественный */
+.section:nth-child(8) .card-image {
+  filter: invert(100%) saturate(4);
 }
