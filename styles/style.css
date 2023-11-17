@@ -18,7 +18,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   padding: 100px 0;
-  font-family: var(--inter);
+  font-family: var(--inter), sans-serif;
   color: var(--font-color);
   font-variation-settings: "wght" var(--wght-text--light);
   background-color: var(--background-color);
@@ -45,7 +45,7 @@
 }
 
 .header {
-  font-family: var(--pressStart);
+  font-family: var(--pressStart), fantasy;
   padding: 157px 0 18px 0;
   text-align: center;
   margin: 0 auto 100px;
@@ -168,9 +168,6 @@
   mix-blend-mode: hard-light;
   color: var(--font-color);
   text-transform: uppercase;
-}
-
-.card-label {
   text-shadow: -1px 0 var(--stroke), 0 1px var(--stroke), 1px 0 var(--stroke), 0 -1px var(--stroke);
 }
 
@@ -289,21 +286,21 @@
 }
 
 /* active */
-.card__icon-button .core {
+/* .card__icon-button .core {
   fill: var(--transparent-color);
   transition: 0.03s;
   transition-delay: 0.03s;
-}
+} */
 
 .card__icon-button:active .core {
   fill: var(--red);
   transition-duration: 0.3s;
 }
 
-.card__icon-button .main-body {
+/* .card__icon-button .main-body {
   fill: var(--transparent-color);
   transition-duration: 0.3s;
-}
+} */
 
 .card__icon-button:active .main-body {
   fill: var(--red);
