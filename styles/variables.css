@@ -1,49 +1,21 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
-
-
 :root {
-  --inter: inter, sans-serif;
-  --pressStart: pressStart, monospace;
-
-  /* typo */
+  --inter: inter;
+  --pressStart: pressStart;
   --wght-title: 700;
   --wght-text: 400;
-  
-  /* colors */
   --background-color: rgb(255, 255, 255);
   --font-color: rgb(0, 0, 0);
   --stroke: rgba(255, 255, 255, 0.5);
   --accent-color: rgb(0, 0, 0);
   --hover-color: rgb(0, 0, 0);
-
   --transparent-color: rgba(0, 0, 0, 0);
-
   --contour: rgb(0, 0, 0);
   --red: rgba(255, 0, 0, 1);
-
-
-  
   --stripe-color: #d3d3d3;
   --start-gradient-color: #e7e7e7;
   --end-gradient-color: #1a1a1a;
-
   --bg-gradient: to bottom, var(--start-gradient-color) 0%, var(--start-gradient-color) 0.01%, var(--end-gradient-color) 100%;
-
---background-image:
-repeating-linear-gradient(
-  var(--stripe-color),
-  var(--stripe-color) 2px,
-  var(--transparent-color) 2px,
-  var(--transparent-color) 4px
-),
-repeating-linear-gradient(
-  90deg,
-  var(--stripe-color),
-  var(--stripe-color) 2px,
-  var(--transparent-color) 2px,
-  var(--transparent-color) 4px
-),
-linear-gradient(var(--bg-gradient));
-
+  --background-image: repeating-linear-gradient(var(--stripe-color), var(--stripe-color) 2px, var(--transparent-color) 2px, var(--transparent-color) 4px), repeating-linear-gradient(90deg, var(--stripe-color) var(--stripe-color) 2px, var(--transparent-color) 2px, var(--transparent-color) 4px), linear-gradient(var(--bg-gradient));
 };

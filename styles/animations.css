@@ -12,3 +12,99 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+
+
+/* hover */
+.card__icon-button .core {
+  fill: var(--transparent-color);
+  transition: 0.03s;
+  transition-delay: 0.03s;
+}
+
+.card__icon-button:hover .core {
+  fill: var(--contour);
+  transition-duration: 0.3s;
+}
+
+.card__icon-button .main-body {
+  fill: var(--transparent-color);
+  transition-duration: 0.3s;
+}
+
+.card__icon-button:hover .main-body {
+  fill: var(--contour);
+  transition-duration: 0.3s;
+  transition-delay: 0.05s;
+}
+
+.card__icon-button:active .core {
+  fill: var(--red);
+  transition-duration: 0.3s;
+}
+
+.card__icon-button:active .main-body {
+  fill: var(--red);
+  transition-duration: 0.3s;
+  transition-delay: 0.05s;
+}
+
+/* Клик по иконке */
+.like-icon.is-liked .contour {
+  transition-delay: 0.06s;
+  transition-duration: 0.3s;
+  fill: var(--red);
+}
+
+.like-icon.is-liked .main-body {
+  transition-duration: 0.3s;
+  fill: var(--red);
+}
+
+.like-icon.is-liked .core {
+  transition-duration: 0.3s;
+  fill: var(--red);
+}
+
+.like-icon.is-liked .heart {
+  animation: heart-scale 0.6s ease-in;
+  animation-delay: 0.1s;
+  animation-direction: alternate;
+  transform-origin: center;
+}
+
+@keyframes heart-scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.contour {
+  transition: 0.01s;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.like-icon.is-liked .sparks {
+  opacity: 0;
+  animation: sparksShine 0.3s ease-in;
+  animation-delay: 0.3s;
+  animation-direction: alternate;
+}
+
+@keyframes sparksShine {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
